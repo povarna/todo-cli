@@ -1,4 +1,4 @@
-module github.com/povarna/todo
+module github.com/povarna/todo-cli
 
 go 1.21
 

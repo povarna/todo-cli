@@ -99,11 +99,11 @@ func (t *Todos) Print() {
 
 	for idx, item := range *t {
 		idx++
-		task := todo.Blue(item.Task)
-		done := todo.Blue("no")
+		task := todo_cli.Blue(item.Task)
+		done := todo_cli.Blue("no")
 		if item.Done {
-			task = todo.Green(fmt.Sprintf("\u2705 %s", item.Task))
-			done = todo.Green("yes")
+			task = todo_cli.Green(fmt.Sprintf("\u2705 %s", item.Task))
+			done = todo_cli.Green("yes")
 		}
 
 		cells = append(cells, *&[]*simpletable.Cell{
@@ -121,7 +121,7 @@ func (t *Todos) Print() {
 
 	table.Footer = &simpletable.Footer{
 		Cells: []*simpletable.Cell{
-			{Align: simpletable.AlignCenter, Span: 5, Text: todo.Red(fmt.Sprintf("You have %d pending todos", t.CountPending()))},
+			{Align: simpletable.AlignCenter, Span: 5, Text: todo_cli.Red(fmt.Sprintf("You have %d pending todos", t.CountPending()))},
 		},
 	}
 

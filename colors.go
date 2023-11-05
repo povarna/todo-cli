@@ -1,4 +1,4 @@
-package todo
+package todo_cli
 
 import "fmt"
 
